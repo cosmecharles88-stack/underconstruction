@@ -1,237 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction | Road Work Ahead</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KKE Concrete Lifting | Site Under Construction</title>
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #111827;
-            overflow-x: hidden;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-        .caution-stripes {
-            background: repeating-linear-gradient(
-                45deg,
-                #facc15,
-                #facc15 20px,
-                #000 20px,
-                #000 40px
-            );
-        }
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
-        .road-texture {
-            background-color: #1f2937;
-            background-image: url("https://www.transparenttextures.com/patterns/asphalt-dark.png");
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #123766 0%, #07111f 45%, #020617 100%);
+      overflow-x: hidden;
+    }
 
-        @keyframes drift {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
+    .kke-blue {
+      color: #0b5cab;
+    }
 
-        .animate-drift {
-            display: flex;
-            width: 200%;
-            animation: drift 20s linear infinite;
-        }
+    .kke-bg-blue {
+      background-color: #0b5cab;
+    }
 
-        .cone-bounce {
-            animation: bounce 2s infinite;
-        }
+    .caution-stripes {
+      background: repeating-linear-gradient(
+        45deg,
+        #0b5cab,
+        #0b5cab 20px,
+        #ffffff 20px,
+        #ffffff 40px
+      );
+    }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
+    .concrete-texture {
+      background-color: #1f2937;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03), rgba(255,255,255,0.03)),
+        url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+    }
 
-        .progress-bar-fill {
-            transition: width 2s ease-out;
-        }
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
 
-        /* Custom Modal Styling */
-        #messageBox {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 100;
-        }
-    </style>
+    .animate-drift {
+      display: flex;
+      width: 200%;
+      animation: drift 20s linear infinite;
+    }
+
+    .tool-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .progress-bar-fill {
+      transition: width 2s ease-out;
+    }
+
+    #messageBox {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+    }
+
+    .logo-card {
+      background: white;
+      border-radius: 22px;
+      padding: 18px 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+      margin-bottom: 28px;
+    }
+
+    .logo-card img {
+      width: 260px;
+      max-width: 80vw;
+      height: auto;
+      object-fit: contain;
+    }
+  </style>
 </head>
+
 <body class="text-white min-h-screen flex flex-col items-center justify-center p-4">
 
-    <!-- Top Caution Bar -->
-    <div class="fixed top-0 left-0 w-full h-4 caution-stripes z-50"></div>
+  <!-- Top KKE Brand Bar -->
+  <div class="fixed top-0 left-0 w-full h-4 caution-stripes z-50"></div>
 
-    <!-- Main Content Card -->
-    <main class="max-w-4xl w-full bg-gray-800 rounded-3xl shadow-2xl overflow-hidden border border-gray-700 relative">
-        
-        <!-- Header Section -->
-        <div class="p-8 md:p-12 text-center relative">
-            <!-- Floating Cones (Decorative) -->
-            <div class="absolute top-4 left-4 opacity-20 hidden md:block">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="#facc15" class="cone-bounce">
-                    <path d="M12 2L4 18H20L12 2ZM12 6.5L16.5 16.5H7.5L12 6.5Z"/>
-                    <rect x="2" y="19" width="20" height="2" />
-                </svg>
-            </div>
-            <div class="absolute top-4 right-4 opacity-20 hidden md:block" style="animation-delay: 0.5s">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="#facc15" class="cone-bounce">
-                    <path d="M12 2L4 18H20L12 2ZM12 6.5L16.5 16.5H7.5L12 6.5Z"/>
-                    <rect x="2" y="19" width="20" height="2" />
-                </svg>
-            </div>
+  <!-- Main Content Card -->
+  <main class="max-w-4xl w-full bg-slate-900/95 rounded-3xl shadow-2xl overflow-hidden border border-blue-900 relative">
 
-            <span class="inline-block px-4 py-1 rounded-full bg-yellow-400 text-black font-bold text-xs uppercase tracking-widest mb-6">
-                Work in Progress
-            </span>
-            
-            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tighter">
-                ROAD WORK <span class="text-yellow-400 underline decoration-yellow-400">AHEAD</span>
-            </h1>
-            
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                We're paving the way for something incredible. Our crew is working double shifts to bring you a brand new digital experience.
-            </p>
+    <!-- Header Section -->
+    <div class="p-8 md:p-12 text-center relative">
 
-            <!-- Countdown Timer -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                <div class="bg-gray-900 p-4 rounded-2xl border border-gray-700">
-                    <div id="days" class="text-3xl font-bold text-yellow-400">00</div>
-                    <div class="text-xs uppercase text-gray-500 font-bold">Days</div>
-                </div>
-                <div class="bg-gray-900 p-4 rounded-2xl border border-gray-700">
-                    <div id="hours" class="text-3xl font-bold text-yellow-400">00</div>
-                    <div class="text-xs uppercase text-gray-500 font-bold">Hours</div>
-                </div>
-                <div class="bg-gray-900 p-4 rounded-2xl border border-gray-700">
-                    <div id="minutes" class="text-3xl font-bold text-yellow-400">00</div>
-                    <div class="text-xs uppercase text-gray-500 font-bold">Minutes</div>
-                </div>
-                <div class="bg-gray-900 p-4 rounded-2xl border border-gray-700">
-                    <div id="seconds" class="text-3xl font-bold text-yellow-400">00</div>
-                    <div class="text-xs uppercase text-gray-500 font-bold">Seconds</div>
-                </div>
-            </div>
+      <!-- Decorative Icons -->
+      <div class="absolute top-5 left-5 opacity-20 hidden md:block tool-bounce">
+        <i class="fas fa-hard-hat text-6xl text-blue-400"></i>
+      </div>
 
-            <!-- Progress Bar -->
-            <div class="mb-12">
-                <div class="flex justify-between text-sm font-bold mb-2 text-gray-400">
-                    <span>ASPHALT LAYING</span>
-                    <span>75% COMPLETE</span>
-                </div>
-                <div class="w-full h-4 bg-gray-900 rounded-full overflow-hidden p-1 border border-gray-700">
-                    <div class="progress-bar-fill h-full bg-yellow-400 rounded-full caution-stripes" style="width: 75%"></div>
-                </div>
-            </div>
+      <div class="absolute top-5 right-5 opacity-20 hidden md:block tool-bounce" style="animation-delay: 0.5s">
+        <i class="fas fa-road text-6xl text-blue-400"></i>
+      </div>
 
-            <!-- Subscription Form -->
-            <div class="max-w-md mx-auto">
-                <p class="text-sm text-gray-400 mb-4">Get notified when the road opens:</p>
-                <form id="notifyForm" class="flex flex-col sm:flex-row gap-2">
-                    <input type="email" required placeholder="Enter your email address" 
-                        class="flex-1 px-6 py-4 rounded-xl bg-gray-900 border border-gray-700 focus:outline-none focus:border-yellow-400 transition-colors text-white">
-                    <button type="submit" 
-                        class="px-8 py-4 rounded-xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition-all transform active:scale-95">
-                        SUBSCRIBE
-                    </button>
-                </form>
-            </div>
+      <!-- LOGO PLACE -->
+      <!-- Put logo.jpg in the same folder as this index.html file -->
+      <div class="logo-card">
+        <img src="logo.jpg" alt="KKE Concrete Lifting Logo">
+      </div>
+
+      <span class="inline-block px-5 py-2 rounded-full bg-blue-600 text-white font-bold text-xs uppercase tracking-widest mb-6">
+        KKE Concrete Lifting
+      </span>
+
+      <h1 class="text-4xl md:text-7xl font-black mb-5 tracking-tighter leading-tight">
+        SITE UNDER <span class="text-blue-400 underline decoration-blue-400">CONSTRUCTION</span>
+      </h1>
+
+      <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        We are building a stronger online experience for property managers, general contractors, municipalities, and commercial clients looking for professional concrete lifting and soil stabilization solutions.
+      </p>
+
+      <!-- Service Proof Strip -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+        <div class="bg-slate-950 p-5 rounded-2xl border border-blue-900">
+          <i class="fas fa-level-up-alt text-blue-400 text-2xl mb-3"></i>
+          <h3 class="font-bold text-white mb-1">Concrete Lifting</h3>
+          <p class="text-sm text-gray-400">Raise settled slabs without full replacement.</p>
         </div>
 
-        <!-- Animated Road Bottom Section -->
-        <div class="road-texture h-16 relative overflow-hidden flex items-center">
-            <div class="animate-drift">
-                <!-- Repeating road lines -->
-                <div class="flex flex-shrink-0 w-full justify-around">
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                </div>
-                <div class="flex flex-shrink-0 w-full justify-around">
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                    <div class="w-12 h-2 bg-yellow-400 rounded-full opacity-50"></div>
-                </div>
-            </div>
+        <div class="bg-slate-950 p-5 rounded-2xl border border-blue-900">
+          <i class="fas fa-shield-alt text-blue-400 text-2xl mb-3"></i>
+          <h3 class="font-bold text-white mb-1">Soil Stabilization</h3>
+          <p class="text-sm text-gray-400">Support weak soils and reduce future movement.</p>
         </div>
-    </main>
 
-    <!-- Social Links -->
-    <div class="mt-12 flex gap-6 text-gray-500">
-        <a href="#" class="hover:text-yellow-400 transition-colors text-2xl"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="hover:text-yellow-400 transition-colors text-2xl"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="hover:text-yellow-400 transition-colors text-2xl"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="hover:text-yellow-400 transition-colors text-2xl"><i class="fab fa-linkedin"></i></a>
+        <div class="bg-slate-950 p-5 rounded-2xl border border-blue-900">
+          <i class="fas fa-city text-blue-400 text-2xl mb-3"></i>
+          <h3 class="font-bold text-white mb-1">Municipal-Grade Work</h3>
+          <p class="text-sm text-gray-400">Built for streets, sidewalks, panels, and public infrastructure.</p>
+        </div>
+      </div>
+
+      <!-- Countdown Timer -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        <div class="bg-slate-950 p-4 rounded-2xl border border-blue-900">
+          <div id="days" class="text-3xl font-bold text-blue-400">00</div>
+          <div class="text-xs uppercase text-gray-500 font-bold">Days</div>
+        </div>
+
+        <div class="bg-slate-950 p-4 rounded-2xl border border-blue-900">
+          <div id="hours" class="text-3xl font-bold text-blue-400">00</div>
+          <div class="text-xs uppercase text-gray-500 font-bold">Hours</div>
+        </div>
+
+        <div class="bg-slate-950 p-4 rounded-2xl border border-blue-900">
+          <div id="minutes" class="text-3xl font-bold text-blue-400">00</div>
+          <div class="text-xs uppercase text-gray-500 font-bold">Minutes</div>
+        </div>
+
+        <div class="bg-slate-950 p-4 rounded-2xl border border-blue-900">
+          <div id="seconds" class="text-3xl font-bold text-blue-400">00</div>
+          <div class="text-xs uppercase text-gray-500 font-bold">Seconds</div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="mb-12">
+        <div class="flex justify-between text-sm font-bold mb-2 text-gray-400">
+          <span>DIGITAL BUILDOUT</span>
+          <span>75% COMPLETE</span>
+        </div>
+
+        <div class="w-full h-4 bg-slate-950 rounded-full overflow-hidden p-1 border border-blue-900">
+          <div class="progress-bar-fill h-full bg-blue-500 rounded-full" style="width: 75%"></div>
+        </div>
+      </div>
+
+      <!-- Subscription Form -->
+      <div class="max-w-md mx-auto">
+        <p class="text-sm text-gray-400 mb-4">Get notified when the new KKE page is live:</p>
+
+        <form id="notifyForm" class="flex flex-col sm:flex-row gap-2">
+          <input type="email" required placeholder="Enter your email address"
+            class="flex-1 px-6 py-4 rounded-xl bg-slate-950 border border-blue-900 focus:outline-none focus:border-blue-400 transition-colors text-white">
+
+          <button type="submit"
+            class="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-500 transition-all transform active:scale-95">
+            NOTIFY ME
+          </button>
+        </form>
+      </div>
     </div>
 
-    <!-- Bottom Caution Bar -->
-    <div class="fixed bottom-0 left-0 w-full h-4 caution-stripes z-50"></div>
-
-    <!-- Message Box Modal -->
-    <div id="messageBox" class="bg-gray-900 border-2 border-yellow-400 p-8 rounded-2xl shadow-2xl max-w-xs text-center">
-        <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-black text-2xl">
-            <i class="fas fa-hard-hat"></i>
+    <!-- Animated Concrete Bottom Section -->
+    <div class="concrete-texture h-16 relative overflow-hidden flex items-center border-t border-blue-900">
+      <div class="animate-drift">
+        <div class="flex flex-shrink-0 w-full justify-around">
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
         </div>
-        <h3 class="text-xl font-bold mb-2">Crew Informed!</h3>
-        <p class="text-gray-400 text-sm mb-6">We've added your email to our dispatch list. You'll hear from us as soon as the road is clear.</p>
-        <button onclick="closeMessage()" class="w-full py-2 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300">
-            DISMISS
-        </button>
+
+        <div class="flex flex-shrink-0 w-full justify-around">
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+          <div class="w-16 h-2 bg-blue-400 rounded-full opacity-60"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contact / Social Links -->
+  <div class="mt-10 text-center text-gray-400">
+    <p class="text-sm mb-4">Need concrete lifting now?</p>
+
+    <a href="mailto:info@kkeinc.net"
+      class="inline-block px-8 py-4 rounded-xl bg-white text-slate-900 font-bold hover:bg-gray-200 transition-all">
+      Contact KKE
+    </a>
+  </div>
+
+  <!-- Bottom KKE Brand Bar -->
+  <div class="fixed bottom-0 left-0 w-full h-4 caution-stripes z-50"></div>
+
+  <!-- Message Box Modal -->
+  <div id="messageBox" class="bg-slate-950 border-2 border-blue-500 p-8 rounded-2xl shadow-2xl max-w-xs text-center">
+    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">
+      <i class="fas fa-hard-hat"></i>
     </div>
 
-    <script>
-        // Set launch date (30 days from now)
-        const launchDate = new Date();
-        launchDate.setDate(launchDate.getDate() + 30);
+    <h3 class="text-xl font-bold mb-2">You’re On The List</h3>
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
+    <p class="text-gray-400 text-sm mb-6">
+      We’ll notify you when the new KKE Concrete Lifting page is live.
+    </p>
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    <button onclick="closeMessage()" class="w-full py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-500">
+      DISMISS
+    </button>
+  </div>
 
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+  <script>
+    const launchDate = new Date();
+    launchDate.setDate(launchDate.getDate() + 30);
 
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("days").innerText = "00";
-            }
-        }
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
 
-        const x = setInterval(updateCountdown, 1000);
-        updateCountdown();
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Form Handling
-        const form = document.getElementById('notifyForm');
-        const modal = document.getElementById('messageBox');
+      document.getElementById("days").innerText = days.toString().padStart(2, '0');
+      document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
 
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            modal.style.display = 'block';
-            form.reset();
-        });
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("days").innerText = "00";
+      }
+    }
 
-        function closeMessage() {
-            modal.style.display = 'none';
-        }
-    </script>
+    const x = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    const form = document.getElementById('notifyForm');
+    const modal = document.getElementById('messageBox');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modal.style.display = 'block';
+      form.reset();
+    });
+
+    function closeMessage() {
+      modal.style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
